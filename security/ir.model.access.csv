@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_course_category,access_course_category,model_course_category,base.group_user,1,1,1,1
+access_course_course,access_course_course,model_course_course,base.group_user,1,1,1,1
+access_course_material,access_course_material,model_course_material,base.group_user,1,1,1,1
+access_course_student,access_course_student,model_course_student,base.group_user,1,1,1,1
+access_course_instructor,access_course_instructor,model_course_instructor,base.group_user,1,1,1,1
+access_course_enrollment,access_course_enrollment,model_course_enrollment,base.group_user,1,1,1,1
+access_course_session,access_course_session,model_course_session,base.group_user,1,1,1,1
+access_course_exam,access_course_exam,model_course_exam,base.group_user,1,1,1,1
+access_course_result,access_course_result,model_course_result,base.group_user,1,1,1,1
+access_course_payment,access_course_payment,model_course_payment,base.group_user,1,1,1,1
