@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+        <!-- Actions -->
+        <record id="action_course_course" model="ir.actions.act_window">
+            <field name="name">Courses</field>
+            <field name="res_model">course.course</field>
+            <field name="view_mode">tree,form,kanban,calendar</field>
+        </record>
+
+
+        <record id="action_course_student" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="res_model">course.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="action_course_instructor" model="ir.actions.act_window">
+            <field name="name">Instructors</field>
+            <field name="res_model">course.instructor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="action_course_enrollment" model="ir.actions.act_window">
+            <field name="name">Enrollments</field>
+            <field name="res_model">course.enrollment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="action_course_session" model="ir.actions.act_window">
+            <field name="name">Sessions</field>
+            <field name="res_model">course.session</field>
+            <field name="view_mode">tree,form,calendar</field>
+        </record>
+
+
+        <record id="action_course_exam" model="ir.actions.act_window">
+            <field name="name">Exams</field>
+            <field name="res_model">course.exam</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="action_course_payment" model="ir.actions.act_window">
+            <field name="name">Payments</field>
+            <field name="res_model">course.payment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!-- Menu -->
+        <menuitem id="menu_course_root" name="Course Management" sequence="10"/>
+        <menuitem id="menu_course_management" name="Management" parent="menu_course_root" sequence="1"/>
+
+
+        <menuitem id="menu_course_courses" name="Courses" parent="menu_course_management"
+                  action="action_course_course"/>
+        <menuitem id="menu_course_students" name="Students" parent="menu_course_management"
+                  action="action_course_student"/>
+        <menuitem id="menu_course_instructors" name="Instructors" parent="menu_course_management"
+                  action="action_course_instructor"/>
+        <menuitem id="menu_course_enrollments" name="Enrollments" parent="menu_course_management"
+                  action="action_course_enrollment"/>
+        <menuitem id="menu_course_sessions" name="Sessions" parent="menu_course_management"
+                  action="action_course_session"/>
+        <menuitem id="menu_course_exams" name="Exams" parent="menu_course_management" action="action_course_exam"/>
+        <menuitem id="menu_course_payments" name="Payments" parent="menu_course_management"
+                  action="action_course_payment"/>
+    </data>
+</odoo>
