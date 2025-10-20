@@ -1,0 +1,40 @@
+<odoo>
+    <record id="view_payment_tree" model="ir.ui.view">
+        <field name="name">course.payment.tree</field>
+        <field name="model">course.payment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="student_id"/>
+                <field name="course_id"/>
+                <field name="amount"/>
+                <field name="payment_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_payment_form" model="ir.ui.view">
+        <field name="name">course.payment.form</field>
+        <field name="model">course.payment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="student_id"/>
+                        <field name="course_id"/>
+                        <field name="invoice_ref"/>
+                        <field name="amount"/>
+                        <field name="currency_id"/>
+                        <field name="payment_date"/>
+                        <field name="method"/>
+                        <field name="state"/>
+                    </group>
+                    <footer>
+                        <button string="Mark Paid" type="object" name="action_mark_paid"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
