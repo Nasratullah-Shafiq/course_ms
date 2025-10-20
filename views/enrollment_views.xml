@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_enrollment_tree" model="ir.ui.view">
+        <field name="name">course.enrollment.tree</field>
+        <field name="model">course.enrollment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="student_id"/>
+                <field name="course_id"/>
+                <field name="enroll_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_enrollment_form" model="ir.ui.view">
+        <field name="name">course.enrollment.form</field>
+        <field name="model">course.enrollment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="student_id"/>
+                        <field name="course_id"/>
+                        <field name="enroll_date"/>
+                        <field name="state"/>
+                        <field name="grade"/>
+                        <field name="attendance_percent"/>
+                        <field name="fees_paid"/>
+                        <field name="invoice_id" readonly="1"/>
+                    </group>
+                    <footer>
+                        <button string="Create Invoice" type="object" name="action_create_invoice" class="btn-primary"/>
+                        <button string="Register Payment" type="object" name="action_register_payment"/>
+                        <button string="Mark Completed" type="object" name="action_mark_completed"/>
+                        <button string="Cancel" type="object" name="action_cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>o>
