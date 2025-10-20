@@ -1,0 +1,43 @@
+<odoo>
+    <record id="view_instructor_tree" model="ir.ui.view">
+        <field name="name">course.instructor.tree</field>
+        <field name="model">course.instructor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="specialization"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_instructor_form" model="ir.ui.view">
+        <field name="name">course.instructor.form</field>
+        <field name="model">course.instructor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="specialization"/>
+                        <field name="image" widget="image"/>
+                    </group>
+                    <notebook>
+                        <page string="Courses">
+                            <field name="course_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="level"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
