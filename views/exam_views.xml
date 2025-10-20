@@ -1,0 +1,43 @@
+<odoo>
+    <record id="view_exam_tree" model="ir.ui.view">
+        <field name="name">course.exam.tree</field>
+        <field name="model">course.exam</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="course_id"/>
+                <field name="exam_date"/>
+                <field name="total_marks"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_exam_form" model="ir.ui.view">
+        <field name="name">course.exam.form</field>
+        <field name="model">course.exam</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="course_id"/>
+                        <field name="exam_date"/>
+                        <field name="total_marks"/>
+                    </group>
+                    <notebook>
+                        <page string="Results">
+                            <field name="result_ids">
+                                <tree>
+                                    <field name="student_id"/>
+                                    <field name="marks_obtained"/>
+                                    <field name="grade"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
