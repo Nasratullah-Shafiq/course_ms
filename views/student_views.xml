@@ -1,0 +1,48 @@
+<odoo>
+    <record id="view_student_tree" model="ir.ui.view">
+        <field name="name">course.student.tree</field>
+        <field name="model">course.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="student_ref"/>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_student_form" model="ir.ui.view">
+        <field name="name">course.student.form</field>
+        <field name="model">course.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="student_ref" readonly="1"/>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="gender"/>
+                        <field name="dob"/>
+                        <field name="status"/>
+                        <field name="image" widget="image"/>
+                    </group>
+                    <notebook>
+                        <page string="Enrollments">
+                            <field name="enrollment_ids">
+                                <tree>
+                                    <field name="course_id"/>
+                                    <field name="enroll_date"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
