@@ -8,3 +8,4 @@ class Instructor(models.Model):
     partner_id = fields.Many2one('res.partner','Partner')
     specialization = fields.Char('Specialization')
     course_ids = fields.One2many('course.course','instructor_id','Courses')
+
