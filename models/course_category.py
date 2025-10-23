@@ -8,6 +8,7 @@ class CourseCategory(models.Model):
     description = fields.Text('Description')
     course_count = fields.Integer('Total Courses', compute='_compute_course_count')
 
+
     @api.depends('course_ids')
     def _compute_course_count(self):
         for record in self:
