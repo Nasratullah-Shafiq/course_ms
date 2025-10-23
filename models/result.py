@@ -15,3 +15,4 @@ class Result(models.Model):
         for record in self:
             if record.marks_obtained > record.exam_id.total_marks:
                 raise ValidationError('Marks cannot exceed total marks.')
+
