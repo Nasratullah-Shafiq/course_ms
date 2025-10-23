@@ -11,3 +11,4 @@ class Payment(models.Model):
     payment_date = fields.Date('Payment Date')
     method = fields.Selection([('cash','Cash'),('card','Card'),('bank','Bank Transfer')], default='cash')
     state = fields.Selection([('draft','Draft'),('paid','Paid'),('cancelled','Cancelled')], default='draft')
+
