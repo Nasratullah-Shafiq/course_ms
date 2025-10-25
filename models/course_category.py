@@ -4,6 +4,7 @@ class CourseCategory(models.Model):
     _name = 'course.category'
     _description = 'Course Category'
 
+
     name = fields.Char('Category Name', required=True)
     description = fields.Text('Description')
     course_count = fields.Integer('Total Courses', compute='_compute_course_count')
