@@ -9,4 +9,4 @@ class Exam(models.Model):
     exam_date = fields.Datetime('Exam Date')
     total_marks = fields.Float('Total Marks')
     result_ids = fields.One2many('course.result','exam_id','Results')
-
+    
