@@ -12,3 +12,4 @@ class Payment(models.Model):
     method = fields.Selection([('cash','Cash'),('card','Card'),('bank','Bank Transfer')], default='cash')
     state = fields.Selection([('draft','Draft'),('paid','Paid'),('cancelled','Cancelled')], default='draft')
 
+
