@@ -60,6 +60,7 @@ class CourseEnrollment(models.Model):
                 raise ValidationError(_('Course has no fee defined.'))
 
 
+
     # find/create partner
     # partner = rec.student_id.partner_id
     #     if not partner:
