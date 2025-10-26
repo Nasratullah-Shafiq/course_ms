@@ -15,3 +15,4 @@ class CourseCategory(models.Model):
             record.course_count = len(record.course_ids)
 
     course_ids = fields.One2many('course.course','category_id','Courses')
+
