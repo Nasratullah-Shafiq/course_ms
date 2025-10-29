@@ -8,4 +8,3 @@ class CourseMaterial(models.Model):
     course_id = fields.Many2one('course.course','Course', required=True)
     material_type = fields.Selection([('pdf','PDF'),('video','Video'),('doc','Document')], default='pdf')
     file = fields.Binary('File')
-
