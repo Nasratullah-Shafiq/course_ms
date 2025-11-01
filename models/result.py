@@ -5,6 +5,7 @@ class Result(models.Model):
     _name = 'course.result'
     _description = 'Result'
 
+
     exam_id = fields.Many2one('course.exam','Exam')
     student_id = fields.Many2one('course.student','Student')
     marks_obtained = fields.Float('Marks Obtained')
