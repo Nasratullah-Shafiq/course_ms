@@ -4,6 +4,7 @@ class Payment(models.Model):
     _name = 'course.payment'
     _description = 'Payment'
 
+
     student_id = fields.Many2one('course.student','Student')
     course_id = fields.Many2one('course.course','Course')
     amount = fields.Monetary('Amount', currency_field='currency_id')
