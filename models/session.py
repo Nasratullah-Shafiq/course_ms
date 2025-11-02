@@ -11,3 +11,4 @@ class Session(models.Model):
     end_datetime = fields.Datetime('End Time')
     location = fields.Char('Location')
     enrollment_ids = fields.One2many('course.enrollment','session_id','Enrollments')
+    
