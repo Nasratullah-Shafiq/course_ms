@@ -10,3 +10,4 @@ class Exam(models.Model):
     total_marks = fields.Float('Total Marks')
     result_ids = fields.One2many('course.result','exam_id','Results')
     
+    
